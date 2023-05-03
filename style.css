@@ -1,15 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Inter:wght@200&family=Outfit:wght@100;400;700&family=Poppins:ital,wght@0,500;1,600;1,700&display=swap');body{
+    background-color: hsl(36, 100%, 99%);
+
+}
+header{
+    margin-right: 75px;
+    margin-left: 75px;
+    display: flex;
+    justify-content: space-between;
+}
 header > ul{
+
     display: flex;
     justify-content: flex-end;
     list-style: none;
     gap: 1em;
     margin-right: 30px;
+    color:  hsl(236, 13%, 42%);
 }
 main{
     margin: 75px;
+    margin-top: 10px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-row-gap: 20px;
+    grid-row-gap: 10px;
     grid-column-gap: 30px;
 }
 .caption{
@@ -18,18 +31,28 @@ main{
     align-items: center;
     font-size: 50px;
     font-weight: bold;
+    
+
     width: 50%;
 }
 .readmore{
     width: 50%;
     display: flex;
     justify-content: flex-start;
-    flex-direction: column;   
-    align-items: end;
+    align-items: start;
+    flex-direction: column;
+    color:  hsl(236, 13%, 42%);
   
 }
-.readermore > button{
-    align-self: flex-start;
+#btn{
+    height: 40px;
+    width: 120px;
+    color: white;
+    background-color: hsl(5, 85%, 63%);
+    font-weight: 400;
+    font-family: 'poppins';
+    border-style: none;
+
 }
 .left{
     grid-column-start: 1;
@@ -40,12 +63,57 @@ main{
     justify-content: space-between;
 }
 .right{
+    padding: 20px;
+    padding-top: 0;
     grid-column-start: 3;
     grid-row-start: 1;
+    background-color:  hsl(240, 100%, 5%);
+    color: hsla(236, 13%, 50%, 100%);
 }
+
+.right .title{
+    font-size: 18px;
+    font-weight: bold;
+    color: hsl(36, 100%, 99%);
+}
+
+.right h1{
+    color: hsl(35, 77%, 62%);
+    font-size: 35px;
+}
+
 .multiple{
     grid-row-start: 3;
     grid-column: span 3;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+
 }
+.content{
+    display: flex;
+    height: 110px;
+    justify-content: flex-start;
+}
+.items{
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    row-gap: 5px;
+}
+.items .num{
+    font-size: 25px;
+    font-family: sans-serif;
+    font-weight: bold;
+    color:  hsl(237, 18%, 76%);
+    }
+.items .title{
+    font-weight: bold;
+    font-family: sans-serif;
+}
+.items p{
+    margin-top: 7px;
+    font-family: sans-serif;
+    color:hsla(233, 8%, 40%, 100%);
+
+}    
