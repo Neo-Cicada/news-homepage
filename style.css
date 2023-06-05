@@ -1,131 +1,123 @@
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Inter:wght@200&family=Outfit:wght@100;400;700&family=Poppins:ital,wght@0,500;1,600;1,700&display=swap');body{
-    background-color: hsl(36, 100%, 99%);
+
+:root{
+    --soft-orange: hsl(35, 77%, 62%);
+    --soft-red: hsl(5, 85%, 63%);
+    --off-white: hsl(36, 100%, 99%);
+    --grayish-blue: hsl(233, 8%, 79%);
+    --dark-grayish-blue: hsl(236, 13%, 42%);
+    --very-dark-blue: hsl(240, 100%, 5%);
+    --fs-16: 1rem;
+}
+body{
+    background-color: var(--off-white);
+}
+.container{
+
+    margin-right: 5%;
+    margin-left: 5%;
+    margin-top: 1%;
 
 }
-header{
-    margin-right: 75px;
-    margin-left: 75px;
+
+header {
     display: flex;
     justify-content: space-between;
+
 }
 header > ul{
-
     display: flex;
-    justify-content: flex-end;
+    gap: var(--fs-16);
     list-style: none;
-    gap: 1em;
-    margin-right: 30px;
-    color:  hsl(236, 13%, 42%);
 }
 main{
-    margin: 75px;
-    margin-top: 10px;
+    margin-top: 1%;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-row-gap: 10px;
-    grid-column-gap: 30px;
+    grid-template-columns: 100%;
+    grid-template-rows: 75% 25%;
+    column-gap: 1em;
+    row-gap: 1em;
+}
+
+.future{
+
+    display: grid;
+    grid-template-columns: 40% 60%;
+}
+hr{
+    width: 100%;
 }
 .caption{
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    font-size: 50px;
-    font-weight: bold;
-    
+    height: 100%;
 
-    width: 50%;
+}
+.caption > h1{
+    font-size: 1.75em; /* Initial font size */
+    max-width: 100%;
+    max-height: 100%;
 }
 .readmore{
-    width: 50%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: start;
-    flex-direction: column;
-    color:  hsl(236, 13%, 42%);
-  
+    font-size: 1rem;
 }
 #btn{
-    height: 40px;
-    width: 120px;
-    color: white;
-    background-color: hsl(5, 85%, 63%);
-    font-weight: 400;
-    font-family: 'poppins';
-    border-style: none;
-
+    border: none;
+    height: 3em;
+    width: 10em;
+    background-color: var(--soft-red);
+    color: var(--off-white);
+    font-size: var(--fs-16);
 }
-.left{
-    grid-column-start: 1;
-    grid-column-end: 3;
-}
-.future{
-    display: flex;
-    justify-content: space-between;
-}
-.right{
-    padding: 20px;
-    padding-top: 0;
-    grid-column-start: 3;
-    grid-row-start: 1;
-    background-color:  hsl(240, 100%, 5%);
-    color: hsla(236, 13%, 50%, 100%);
-}
-
-.right .title{
-    font-size: 18px;
-    font-weight: bold;
-    color: hsl(36, 100%, 99%);
-}
-
-.right h1{
-    color: hsl(35, 77%, 62%);
-    font-size: 35px;
-}
-
 .multiple{
-    grid-row-start: 3;
-    grid-column: span 3;
-    display: flex;
-    justify-content: space-between;
 
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-column-end: span 2;
+}
+.contentImg{
+    height: 8em;
+    width: 7em;
 }
 .content{
-    display: flex;
-    height: 110px;
-    justify-content: flex-start;
+    display: grid;
+    grid-template-columns: 35% 50%;
 }
-.items{
-    margin-left: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    row-gap: 5px;
+.right{
+    background-color: var(--very-dark-blue);
+    color: var(--off-white);
+    padding-left: 5%;
+    padding-right: 5%;
 }
-.items .num{
-    font-size: 25px;
-    font-family: sans-serif;
-    font-weight: bold;
-    color:  hsl(237, 18%, 76%);
+.right > h1 {
+    color: var(--soft-orange);
+    font-size: 2rem;
+}
+.content > .items{
+    margin-left: 1.5em;
+}
+.hero-container{
+
+    display: grid;
+    grid-template-columns: 65% 32%;
+    gap: 3%;
+}
+
+@media (max-width: 44em) {
+
+    main{
+        grid-template-columns: 100%;
+
     }
-.items .title{
-    font-weight: bold;
-    font-family: sans-serif;
-}
-.items p{
-    margin-top: 7px;
-    font-family: sans-serif;
-    color:hsla(233, 8%, 40%, 100%);
+    .future{
+        grid-template-columns: 100%;
+    }
+    .left{
+        grid-template-columns: 100%;
 
-}
-a{
-    color: inherit;
-    text-decoration: none;
-}    
-a:active{
-    color: hsl(35, 77%, 62%);
-}
-#btn:active{
-    background-color: black;
-}
+    }
+    .multiple{
+        grid-template-columns: 100%;
+    }
+    .hero-container{
+        grid-template-columns: 100%;
 
-
+    }
+}
